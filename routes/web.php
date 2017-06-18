@@ -11,8 +11,9 @@
 |
 */
 $app->get('/', 'ApiController@index');
-$app->get('labels', 'ApiController@labels');
-$app->get('labels/{sequences}', 'ApiController@labels');
-$app->get('rtb/{sequences}', 'ApiController@rtb');
-$app->get('campaigns', 'ApiController@campaigns');
-$app->get('campaigns/{id}', 'ApiController@campaigns');
+$app->get('/tryit', 'ApiController@tryit');
+$app->get('labels', 'Api\V1\RTBController@index');
+$app->get('labels/{sequences}', 'Api\V1\RTBController@index');
+$app->get('rtb/{sequences}', 'Api\V1\RTBController@rtb');
+$app->get('campaigns', 'Api\V1\CampaignsController@index');
+$app->get('campaigns/{id}', 'Api\V1\CampaignsController@index');
